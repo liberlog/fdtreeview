@@ -1,0 +1,11 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tformfd','FORMDATA',[
+  'TPF0'#7'Tformfd'#6'formfd'#4'Left'#3'$'#1#6'Height'#3','#1#3'Top'#3#3#1#5'Wi'
+  +'dth'#3#144#1#13'ActiveControl'#7#10'FDTreeView'#10'AutoScroll'#9#7'Caption'
+  +#6#6'formfd'#12'ClientHeight'#3','#1#11'ClientWidth'#3#144#1#10'LCLVersion'#6
+  +#6'0.9.30'#0#11'TFDTreeView'#10'FDTreeView'#4'Left'#2#0#6'Height'#3','#1#3'T'
+  +'op'#2#0#5'Width'#3#144#1#9'NodeWidth'#3#150#0#10'NodeHeight'#2'2'#11'OnPain'
+  +'tNode'#7#19'FDTreeViewPaintNode'#5'Align'#7#8'alClient'#11'AutoEnlarge'#9#0
+  +#0#0
+]);

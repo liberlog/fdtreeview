@@ -1,0 +1,23 @@
+object formfd: Tformfd
+  Left = 292
+  Height = 300
+  Top = 259
+  Width = 400
+  ActiveControl = FDTreeView
+  AutoScroll = True
+  Caption = 'formfd'
+  ClientHeight = 300
+  ClientWidth = 400
+  LCLVersion = '0.9.30'
+  object FDTreeView: TFDTreeView
+    Left = 0
+    Height = 300
+    Top = 0
+    Width = 400
+    NodeWidth = 150
+    NodeHeight = 50
+    OnPaintNode = FDTreeViewPaintNode
+    Align = alClient
+    AutoEnlarge = True
+  end
+end
