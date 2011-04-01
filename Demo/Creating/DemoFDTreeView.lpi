@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="4">
+      <Item1>
+        <PackageName Value="ExtCopy"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="rxnew"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="lfdtreeview"/>
+        <MinVersion Valid="True"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LCL"/>
+      </Item4>
+    </RequiredPackages>
+    <Units Count="12">
+      <Unit0>
+        <Filename Value="DemoFDTreeView.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="13"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="MainForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DlgMainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainForm"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="20" Y="16"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="About.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DlgAbout"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="About"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="14"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="Miscel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Miscel"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="SetNodeProperties.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DlgSetNodeProperties"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SetNodeProperties"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="10" Y="5"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Preferences.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DlgPreferences"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Preferences"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="14"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="MainForm.lfm"/>
+        <TopLine Value="1185"/>
+        <CursorPos X="1" Y="1205"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\..\..\..\..\..\lazarus\fpc\2.2.4\source\packages\fpmkunit\src\fpmkunit.pp"/>
+        <UnitName Value="fpmkunit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3108"/>
+        <CursorPos X="10" Y="3128"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="Preferences.lfm"/>
+        <TopLine Value="132"/>
+        <CursorPos X="33" Y="159"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\..\..\..\..\..\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="14" Y="550"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\..\..\..\..\..\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2236"/>
+        <CursorPos X="3" Y="2236"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\..\..\ExtCopy\fonctions\fonctions_file.pas"/>
+        <UnitName Value="fonctions_file"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="89"/>
+        <CursorPos X="124" Y="99"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit11>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="20" Column="1" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="284" Column="37" TopLine="260"/>
+      </Position2>
+      <Position3>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="280" Column="15" TopLine="260"/>
+      </Position4>
+      <Position5>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="409" Column="1" TopLine="386"/>
+      </Position5>
+      <Position6>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="110" Column="1" TopLine="86"/>
+      </Position6>
+      <Position7>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="506" Column="1" TopLine="488"/>
+      </Position7>
+      <Position8>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="74" Column="2" TopLine="72"/>
+      </Position8>
+      <Position9>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="239" Column="14" TopLine="212"/>
+      </Position9>
+      <Position10>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="245" Column="16" TopLine="233"/>
+      </Position10>
+      <Position11>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="13" Column="20" TopLine="1"/>
+      </Position11>
+      <Position12>
+        <Filename Value="About.pas"/>
+        <Caret Line="7" Column="1" TopLine="1"/>
+      </Position12>
+      <Position13>
+        <Filename Value="About.pas"/>
+        <Caret Line="39" Column="6" TopLine="17"/>
+      </Position13>
+      <Position14>
+        <Filename Value="About.pas"/>
+        <Caret Line="60" Column="10" TopLine="28"/>
+      </Position14>
+      <Position15>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="5" Column="10" TopLine="1"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Miscel.pas"/>
+        <Caret Line="7" Column="1" TopLine="1"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Miscel.pas"/>
+        <Caret Line="14" Column="1" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Miscel.pas"/>
+        <Caret Line="617" Column="77" TopLine="610"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Preferences.pas"/>
+        <Caret Line="28" Column="55" TopLine="18"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Preferences.pas"/>
+        <Caret Line="5" Column="10" TopLine="1"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Preferences.pas"/>
+        <Caret Line="129" Column="5" TopLine="95"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Miscel.pas"/>
+        <Caret Line="618" Column="37" TopLine="610"/>
+      </Position22>
+      <Position23>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="519" Column="14" TopLine="514"/>
+      </Position23>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Other>
+      <CompilerMessages>
+        <UseMsgFile Value="True"/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
