@@ -16,7 +16,7 @@
         <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
-    <Version Major="1" Build="1"/>
+    <Version Major="1" Build="2"/>
     <Files Count="2">
       <Item1>
         <Filename Value="regfdtreeview.pas"/>
@@ -46,4 +46,4 @@
       <IgnoreBinaries Value="False"/>
     </PublishOptions>
   </Package>
-</CONFIG>
+</CONFIG>
