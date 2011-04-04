@@ -23,11 +23,15 @@ const
   DefaultFileName = 'Defaut.soc';
 
 type
+
+  { TDlgMainForm }
+
   TDlgMainForm = class(TForm)
     MainMenu1: TMainMenu;
     ImageListMainMenu: TImageList;
     MnFichier: TMenuItem;
     MnQuitter: TMenuItem;
+    MTV: TFDTreeView;
     ToolBar1: TToolBar;
     PupMenuNode: TPopupMenu;
     PupMenuTree: TPopupMenu;
@@ -70,8 +74,8 @@ type
     MnInformations: TMenuItem;
     N9: TMenuItem;
     Panel2: TPanel;
+    scroll: TScrollBox;
     Label1: TLabel;
-    MTV: TFDTreeView;
     procedure MnQuitterClick(Sender: TObject);
     procedure Couleur1Click(Sender: TObject);
     procedure MnAjouterUnNoeudClick(Sender: TObject);
@@ -528,7 +532,8 @@ end;
 
 procedure TDlgMainForm.PupMenuNodePopup(Sender: TObject);
 begin
-  MnSupprimerLeNoeud.Enabled := (FSelectedNode.ParentNode <> Nil);
+  MnSupprimerLeNoeud.Enabled := assigned ( FSelectedNode )
+                             and (FSelectedNode.ParentNode <> Nil);
 end;
 
 procedure TDlgMainForm.MnAProposClick(Sender: TObject);

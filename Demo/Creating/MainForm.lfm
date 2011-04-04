@@ -1,7 +1,7 @@
 object DlgMainForm: TDlgMainForm
-  Left = 208
+  Left = 421
   Height = 531
-  Top = 115
+  Top = 161
   Width = 781
   Caption = 'DlgMainForm'
   ClientHeight = 506
@@ -87,39 +87,47 @@ object DlgMainForm: TDlgMainForm
     Width = 781
     HelpContext = 6210
     Align = alClient
-    BevelInner = bvRaised
-    BevelOuter = bvLowered
-    Caption = 'Panel2'
     ClientHeight = 456
     ClientWidth = 781
     TabOrder = 2
     TabStop = True
-    object Label1: TLabel
-      Left = 2
-      Height = 1
-      Top = 2
-      Width = 777
-      Align = alTop
-      Alignment = taCenter
-      ParentColor = False
-    end
-    object MTV: TFDTreeView
-      Left = 2
-      Height = 451
-      Top = 3
-      Width = 777
-      HelpContext = 6210
-      NodePopupMenu = PupMenuNode
-      NodeWidth = 65
-      NodeHeight = 21
-      NodeDefaultFont.Color = clBlack
-      NodeDefaultFont.Height = -11
-      NodeDefaultFont.Name = 'MS Sans Serif'
-      OnSelectedNodeChange = MTVSelectedNodeChange
-      OnNodeClick = MTVNodeClick
+    object scroll: TScrollBox
+      Left = 1
+      Height = 454
+      Top = 1
+      Width = 779
       Align = alClient
-      PopupMenu = PupMenuTree
-      TabStop = True
+      ClientHeight = 452
+      ClientWidth = 777
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 0
+        Height = 1
+        Top = 0
+        Width = 777
+        Align = alTop
+        Alignment = taCenter
+        ParentColor = False
+      end
+      object MTV: TFDTreeView
+        Left = 769
+        Height = 451
+        Top = 1
+        Width = 8
+        HelpContext = 6210
+        NodePopupMenu = PupMenuNode
+        NodeWidth = 65
+        NodeHeight = 21
+        NodeDefaultFont.Color = clBlack
+        NodeDefaultFont.Height = -11
+        NodeDefaultFont.Name = 'MS Sans Serif'
+        OnSelectedNodeChange = MTVSelectedNodeChange
+        OnNodeClick = MTVNodeClick
+        Align = alRight
+        PopupMenu = PupMenuTree
+        AutoEnlarge = True
+        TabStop = True
+      end
     end
   end
   object MainMenu1: TMainMenu
@@ -1279,7 +1287,7 @@ object DlgMainForm: TDlgMainForm
   object SaveDlgTree: TSaveDialog
     DefaultExt = '.soc'
     Filter = 'Fichier arborescence filtre Wan-AO|*.soc'
-    left = 14
-    top = 48
+    left = 24
+    top = 72
   end
 end

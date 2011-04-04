@@ -25,7 +25,6 @@ uses
 type
   TTreeOrientation = (toHorizontal, toVertical);
   TNodeAlign = (naNormal, naInvert);
-  TLineType = (ltDirect, ltPlain);
 
   TFDTreeView = Class;
   TFDNode = Class;
@@ -47,7 +46,6 @@ type
   TFDNode = Class(TSpeedButton)
   private
     FLevel: Integer;
-    FLineType : TLineType;
     FParentTree: TFDTreeView;
     FParentNode: TFDNode;
     FChildList: TList;
@@ -76,7 +74,6 @@ type
 
   TFDTreeView = Class(TCustomFDTree)
   private
-    FLineType: TLineType;
     FOnPaintNode : EOnPaintNode;
     FAutoEnlarge,
     FDestroyingRootNode : Boolean;
@@ -86,7 +83,7 @@ type
     FLabelInfo: TLabel;
     FLineColor: TColor;
     FBackColor: TColor;
-    FTotalMaxCount : Integer;
+    FTotalMaxCount : Longint;
     FMargin: Integer;
     FNodeMargin: Integer;
     FTreeOrientation: TTreeOrientation;
@@ -114,7 +111,6 @@ type
     function GetNodeCount: Integer;
     procedure SetAcceptRepaint ( const Value : Boolean );
     procedure SetAutoEnlarge ( const Value : Boolean );
-    procedure SetLineType  ( const Value : TLineType );
     function setSortList(const ALevel : Integer ; var CountedChildNodes, CountedNoChildParentNodes: Integer): TList;
   protected
     procedure SortAddrNodes( const ANodeList: TList; const ANode: TFDNode); overload;
@@ -129,7 +125,7 @@ type
     function GetNode( Index: Integer): TFDNode; virtual;
     procedure Enlarge; virtual;
   public
-    property TotalMaxCount : Integer read FTotalMaxCount;
+    property TotalMaxCount : Longint read FTotalMaxCount;
     property DestroyingRootNode : Boolean read FDestroyingRootNode;
     function GetMaxLevel: Integer; virtual;
     function IsPaintNodeEvent : Boolean; override;
@@ -163,7 +159,6 @@ type
     property NodeHeight: Integer Read FNodeHeight Write SetNodeHeight Default 25;
     property NodeDefaultFont: TFont Read FNodeDefaultFont Write SetNodeDefaultFont;
     property OnPaintNode : EOnPaintNode read FOnPaintNode write FOnPaintNode;
-    property LineType : TLineType read FLineType write SetLineType ;
     // Evénements du TreeView
     property OnSelectedNodeChange: TNodeNotifyEvent Read FSelectedNodeChange Write FSelectedNodeChange;
     // Evénement des noeuds
@@ -378,9 +373,9 @@ constructor TFDTreeView.Create(AOwner: TComponent);
 begin
   FAcceptRepaint := false;
   inherited Create(AOwner);
-  FTotalMaxCount := 0 ;
   FNodeMargin := 4 ;
   FAutoEnlarge := False;
+  FTotalMaxCount := 0;
   Parent := AOwner as TWinControl;
   FDestroyingRootNode := False;
   FNodeList := TList.Create;
@@ -612,20 +607,8 @@ end;
 
 procedure TFDTreeView.SetAutoEnlarge(const Value: Boolean);
 begin
-  if FAutoEnlarge <> Value Then
-    Begin
-      FAutoEnlarge := Value;
-      SendToScreen;
-    end;
-end;
-
-procedure TFDTreeView.SetLineType(const Value: TLineType);
-begin
-  if FLineType <> Value Then
-    Begin
-      FLineType := Value;
-      SendToScreen;
-    end;
+  FAutoEnlarge := Value;
+  SendToScreen;
 end;
 
 function TFDTreeView.GetMaxLevel: Integer;
@@ -721,10 +704,10 @@ var
   CountChildParentNodes,
   CountNoChildParentNodes ,
   AMaxLevel,
-  SumNoChildParentNodes : Integer;
+  SumNoChildParentNodes : LongInt;
   SortList : TList ;
   // Aligner les noeuds sur la ligne
-  function GetAlignedNodesPos ( const NodeSize, ASize, ParentLeftTop : Integer ): Integer;
+  function GetAlignedNodesPos ( const NodeSize, ASize, ParentLeftTop : Longint ): Longint;
     Begin
 { Boucher les trous mais nécessite une tlist
   if (ASize/2)-(ParentLeftTop+NodeSize/2) <> 0 then
@@ -737,7 +720,7 @@ var
       + i * ( Step )) ;//,/CountChildNodes * Step + Step * (i / CountChildNodes + 1 / CountChildNodes * 0.5 ) - NodeSize / 2  + Margin )//+ OldNoChildParentNodes * Step div 2 + LeftTopPosition)        Result := Result + Trunc ( OldNoChildParentNodes * (ParentLeftTop-ASize/2)/Abs(ParentLeftTop-ASize/2) * Step );
     End;
   // Aligner les noeaud à chaque niveau
-  function GetLeveledNodesPos ( const TreeSize, NodeSize : Integer ): Integer;
+  function GetLeveledNodesPos ( const TreeSize, NodeSize : Longint ): Longint;
     Begin
       if NodeAlign = naInvert Then  // Inversion
         Result := TreeSize - NodeSize - ( NodeSize + FNodeMargin * 2 ) * ( SomeLevel - 1 ) - FMargin
@@ -745,7 +728,7 @@ var
         Result := ( NodeSize + FNodeMargin * 2 ) * ( SomeLevel - 1 ) + FMargin;
     End;
   // Ecart de noeaud
-  function getStep ( const ASize : Integer ) : Integer;
+  function getStep ( const ASize : Longint ) : Longint;
   Begin
     Result := (ASize - Margin * 2) div ( SortList.Count + SumNoChildParentNodes );// + CountNoChildParentNodes ) *MaxChildNodes );//* MaxChildNodes + CountNoChildParentNodes );
   End;
@@ -832,7 +815,7 @@ begin
   FTotalMaxCount := CountChildNodes + SumNoChildParentNodes;
   Invalidate;
 end;
-function TFDTreeView.setSortList ( const ALevel : Integer ; var CountedChildNodes, CountedNoChildParentNodes : Integer ):TList;
+function TFDTreeView.setSortList ( const ALevel : Integer ; var CountedChildNodes, CountedNoChildParentNodes : Longint ):TList;
 var n : integer;
     SomeNode : TFDNode;
 Begin
@@ -859,13 +842,13 @@ var
   MaxChildNodes,
   CountChildNodes,
   CountNoChildParentNodes ,
-  SumNoChildParentNodes : Integer;
+  SumNoChildParentNodes : LongInt;
   SomeNode : TFDNode;
   SortList : TList ;
 Begin
   OldCountNoChildParentNodes := 0 ;
-  CountChildNodes            := 0 ;
   SumNoChildParentNodes      := 0 ;
+  CountChildNodes            := 0 ;
   AMaxLevel                  := GetMaxLevel;
   for SomeLevel := 2 to AMaxLevel do
     Begin
@@ -904,12 +887,12 @@ end;
 procedure TFDTreeView.Enlarge;
 var MaxLevel  ,
     MaxWidth  ,
-    MaxHeight : Integer;
-  function getMaxLeveledSize ( const NodeSize : integer ): Integer;
+    MaxHeight : LongInt;
+  function getMaxLeveledSize ( const NodeSize : integer ): Longint;
     Begin
       Result := MaxLevel * ( NodeSize + FNodeMargin * 2 ) + Margin * 2;
     End;
-  function getMaxNodesCountLeveledSize ( const NodeSize : integer ): Integer;
+  function getMaxNodesCountLeveledSize ( const NodeSize : integer ): Longint;
     Begin
       Result := ( NodeSize + FNodeMargin * 2 ) * FTotalMaxCount + Margin * 2;
     End;
@@ -934,6 +917,7 @@ begin
          Align := alLeft ;
        if Align in [alBottom,alTop] then
          Align := alNone ;
+       Width := MaxWidth;
      End;
    if ( MaxHeight > Height ) Then
      Begin
@@ -941,14 +925,16 @@ begin
          Align := alTop ;
        if Align in [alLeft,alRight] then
          Align := alNone ;
+       Height := MaxHeight;
      End;
-   Height := MaxHeight;
-   Width  := MaxWidth ;
 end;
 procedure TFDTreeView.Resize;
 begin
-  inherited;
-  SendToScreen;
+   if not FAutoEnlarge Then
+    Begin
+      inherited;
+      SendToScreen;
+    end;
 end;
 
 {******* Evénément des noeuds ******* }
