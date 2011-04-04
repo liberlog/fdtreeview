@@ -110,10 +110,10 @@ object DlgMainForm: TDlgMainForm
         ParentColor = False
       end
       object MTV: TFDTreeView
-        Left = 769
+        Left = 0
         Height = 451
         Top = 1
-        Width = 8
+        Width = 777
         HelpContext = 6210
         NodePopupMenu = PupMenuNode
         NodeWidth = 65
@@ -123,7 +123,7 @@ object DlgMainForm: TDlgMainForm
         NodeDefaultFont.Name = 'MS Sans Serif'
         OnSelectedNodeChange = MTVSelectedNodeChange
         OnNodeClick = MTVNodeClick
-        Align = alRight
+        Align = alClient
         PopupMenu = PupMenuTree
         AutoEnlarge = True
         TabStop = True
