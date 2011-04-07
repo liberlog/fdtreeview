@@ -108,7 +108,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Preferences"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
@@ -168,10 +167,11 @@
       <Unit12>
         <Filename Value="..\..\FDTreeView.pas"/>
         <UnitName Value="FDTreeView"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="630"/>
-        <CursorPos X="79" Y="636"/>
+        <TopLine Value="354"/>
+        <CursorPos X="29" Y="372"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit12>
@@ -196,123 +196,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Caret Line="687" Column="13" TopLine="678"/>
       </Position1>
       <Position2>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="86" Column="20" TopLine="57"/>
+        <Caret Line="674" Column="19" TopLine="665"/>
       </Position2>
       <Position3>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="378" Column="18" TopLine="349"/>
+        <Caret Line="19" Column="25" TopLine="19"/>
       </Position3>
       <Position4>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="816" Column="1" TopLine="787"/>
+        <Caret Line="61" Column="27" TopLine="32"/>
       </Position4>
       <Position5>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="765" Column="26" TopLine="754"/>
+        <Caret Line="136" Column="27" TopLine="107"/>
       </Position5>
       <Position6>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="815" Column="1" TopLine="787"/>
+        <Caret Line="322" Column="30" TopLine="309"/>
       </Position6>
       <Position7>
-        <Filename Value="..\..\..\..\..\..\..\..\..\usr\lib\lazarus\0.9.30\lcl\lclproc.pas"/>
-        <Caret Line="1546" Column="75" TopLine="1526"/>
+        <Filename Value="..\..\FDTreeView.pas"/>
+        <Caret Line="331" Column="46" TopLine="309"/>
       </Position7>
       <Position8>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="815" Column="11" TopLine="787"/>
+        <Caret Line="449" Column="15" TopLine="420"/>
       </Position8>
       <Position9>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="851" Column="36" TopLine="842"/>
+        <Caret Line="434" Column="18" TopLine="420"/>
       </Position9>
       <Position10>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="758" Column="11" TopLine="753"/>
+        <Caret Line="449" Column="15" TopLine="420"/>
       </Position10>
       <Position11>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="687" Column="13" TopLine="678"/>
+        <Caret Line="461" Column="15" TopLine="432"/>
       </Position11>
       <Position12>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="674" Column="19" TopLine="665"/>
+        <Caret Line="531" Column="17" TopLine="502"/>
       </Position12>
       <Position13>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="19" Column="25" TopLine="19"/>
+        <Caret Line="539" Column="17" TopLine="510"/>
       </Position13>
       <Position14>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="61" Column="27" TopLine="32"/>
+        <Caret Line="547" Column="17" TopLine="518"/>
       </Position14>
       <Position15>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="136" Column="27" TopLine="107"/>
+        <Caret Line="567" Column="17" TopLine="538"/>
       </Position15>
       <Position16>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="322" Column="30" TopLine="309"/>
+        <Caret Line="576" Column="17" TopLine="547"/>
       </Position16>
       <Position17>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="331" Column="46" TopLine="309"/>
+        <Caret Line="584" Column="17" TopLine="555"/>
       </Position17>
       <Position18>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="449" Column="15" TopLine="420"/>
+        <Caret Line="604" Column="21" TopLine="575"/>
       </Position18>
       <Position19>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="434" Column="18" TopLine="420"/>
+        <Caret Line="611" Column="15" TopLine="582"/>
       </Position19>
       <Position20>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="449" Column="15" TopLine="420"/>
+        <Caret Line="635" Column="35" TopLine="606"/>
       </Position20>
       <Position21>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="461" Column="15" TopLine="432"/>
+        <Caret Line="917" Column="35" TopLine="905"/>
       </Position21>
       <Position22>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="531" Column="17" TopLine="502"/>
+        <Caret Line="399" Column="23" TopLine="384"/>
       </Position22>
       <Position23>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="539" Column="17" TopLine="510"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position23>
       <Position24>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="547" Column="17" TopLine="518"/>
+        <Caret Line="63" Column="27" TopLine="34"/>
       </Position24>
       <Position25>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="567" Column="17" TopLine="538"/>
+        <Caret Line="138" Column="27" TopLine="109"/>
       </Position25>
       <Position26>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="576" Column="17" TopLine="547"/>
+        <Caret Line="334" Column="40" TopLine="323"/>
       </Position26>
       <Position27>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="584" Column="17" TopLine="555"/>
+        <Caret Line="353" Column="28" TopLine="338"/>
       </Position27>
       <Position28>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="604" Column="21" TopLine="575"/>
+        <Caret Line="458" Column="15" TopLine="429"/>
       </Position28>
       <Position29>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="611" Column="15" TopLine="582"/>
+        <Caret Line="353" Column="25" TopLine="335"/>
       </Position29>
       <Position30>
         <Filename Value="..\..\FDTreeView.pas"/>
-        <Caret Line="635" Column="35" TopLine="606"/>
+        <Caret Line="370" Column="25" TopLine="352"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

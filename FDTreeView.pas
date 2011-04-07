@@ -25,6 +25,7 @@ uses
 type
   TTreeOrientation = (toHorizontal, toVertical);
   TNodeAlign = (naNormal, naInvert);
+  TNodeType = (ntDirect,ntPlain);
 
   TFDTreeView = Class;
   TFDNode = Class;
@@ -75,6 +76,7 @@ type
   TFDTreeView = Class(TCustomFDTree)
   private
     FOnPaintNode : EOnPaintNode;
+    FNodeType : TNodeType;
     FAutoEnlarge,
     FDestroyingRootNode : Boolean;
     FRootNode : TFDNode;
@@ -151,6 +153,7 @@ type
     property LineColor: TColor Read FLineColor Write SetLineColor Default clGray;
     property BackColor: TColor Read FBackColor Write SetBackColor Default ClBtnFace;
     property Margin: Integer Read FMargin Write SetIdent Default 4;
+    property NodeType : TNodeType read FNodeType write FNodeType default ntPlain;
     property NodeMargin: Integer Read FNodeMargin Write SetNodeMargin Default 4;
     property TreeOrientation: TTreeOrientation  Read FTreeOrientation Write SetTreeOrientation Default toVertical;
     property NodeAlign: TNodeAlign Read FNodeAlign Write SetNodeAlign Default naNormal;
@@ -347,8 +350,14 @@ begin
          Else// Inversion
           MoveTo(FParentNode.Left + (FParentNode.Width div 2), FParentNode.Top );
         if FParentTree.NodeAlign = naNormal Then
+         if FParentTree.NodeType = ntPlain then
+         begin
+           LineTo(Self.Left + (Self.Width Div 2), Self.Top-5);
+           rectangle (Self.Left + (Self.Width Div 2), Self.Top-5, Self.Left +1+ (Self.Width Div 2), Self.Top); // TRAIT VERTICAL
+         end
+        Else
           LineTo(Self.Left + (Self.Width Div 2), Self.Top)
-         Else // Inversion
+        Else // Inversion
           LineTo(Self.Left + (Self.Width Div 2), Self.Top + Self.Height);
        end
       else
@@ -358,6 +367,12 @@ begin
          Else  // Inversion
           MoveTo(FParentNode.Left, FParentNode.Top + (FParentNode.Height div 2));
         if FParentTree.NodeAlign = naNormal Then
+         if FParentTree.NodeType = ntPlain then
+         begin
+           LineTo(Self.Left-5, Self.Top + (Self.Height Div 2));
+           rectangle (Self.Left-5, Self.Top + (Self.Height Div 2), Self.Left, Self.Top + (Self.Height Div 2)); // TRAIT HORIZONTAL
+         end
+        Else
           LineTo(Self.Left, Self.Top + (Self.Height Div 2))
          Else  // Inversion
           LineTo(Self.Left+Self.Width, Self.Top + (Self.Height Div 2));
@@ -375,6 +390,7 @@ begin
   inherited Create(AOwner);
   FNodeMargin := 4 ;
   FAutoEnlarge := False;
+  FNodeType := ntPlain;
   FTotalMaxCount := 0;
   Parent := AOwner as TWinControl;
   FDestroyingRootNode := False;
@@ -731,6 +747,7 @@ var
   function getStep ( const ASize : Longint ) : Longint;
   Begin
     Result := (ASize - Margin * 2) div ( SortList.Count + SumNoChildParentNodes );// + CountNoChildParentNodes ) *MaxChildNodes );//* MaxChildNodes + CountNoChildParentNodes );
+    if result < 155 then result := 155; // valeur en dur il faudrait mettre la largeur du noeud en dynamique
   End;
   //
   // Position par rapport au noeaud parent
